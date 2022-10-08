@@ -7,12 +7,13 @@ import json
 # Используемые ресурсы:
 # https://github.com/reddit-archive/reddit/wiki/OAuth2
 # https://towardsdatascience.com/how-to-use-the-reddit-api-in-python-5e05ddfd1e5c
+from pprint import pprint
+from pprint import pformat
 
 
-
-
-load_dotenv(find_dotenv()) #for ./env
-print(f" {env['CLIENT_ID'] = }")
+'''
+ load_dotenv(find_dotenv()) #for ./env
+ print(f" {env['CLIENT_ID'] = }")
 
 # login method (password), username, and password
 data = {'grant_type': 'password',
@@ -23,9 +24,10 @@ print(f"{env['user_name']=}")
 print(f"{env['password']=}")
 # указываем параметры аутентификации
 auth = requests.auth.HTTPBasicAuth(env['CLIENT_ID'], env['SECRET_TOKEN'])
+'''
 
 #=========Without env=============
-'''
+
 data = {'grant_type': 'password',
         'username': user_name,
         'password': password}
@@ -34,7 +36,7 @@ print(f"{user_name = }")
 print(f"{password = }")
 # указываем параметры аутентификации
 auth = requests.auth.HTTPBasicAuth(CLIENT_ID, SECRET_TOKEN)
-'''
+
 #=========================
 
 
@@ -65,107 +67,107 @@ print(f"{TOKEN = }")
 headers = {**headers, **{'Authorization': f"bearer {TOKEN}"}}
 print(f"{headers = }")
 
-time.sleep(2.0)
 
-# while the token is valid (~2 hours) we just add headers=headers to our requests
-def make_requests1():
-    result = requests.get('https://oauth.reddit.com/api/v1/me', headers=headers)
-    print("requests.get was done")
-    print(f'{result.status_code =}')
-    print(f"{result.headers['content-type']=}")
-    print(f"\n{result.headers =}\n\n")
-    print(f'{result.text=}\n')
-    try:
-        print(f'\n{result.json()=}\n')
-    except ValueError:
-        print('ValueError: No JSON object could be decoded.')
-    print(f'{result.encoding=}')
-    print(f'{result.is_redirect=}')
-    print(f'{result.elapsed=}')
-    print(f'{result.url=}')
-    print(f'{result.history=}')
-    print(f'{type(result)=}')
+def show_all_comments(comments, nesting_of_comment, num_of_file):
+    filename_comment_for_top_post = "comment_for_top_post_"+str(num_of_file+1)+'.txt'
+    if "author" in comments and "body" in comments:
+        with open( filename_comment_for_top_post, 'a', encoding='utf-8') as file_comment_top_post:
+            file_comment_top_post.write(nesting_of_comment*"--- " + f"{comments['author']}: {comments['body']}\n")
+        file_comment_top_post.close()
+        author = comments['author']
 
-    result.raise_for_status()
-    print(f'{result.json()=}')
-    return result
+    if 'replies' in comments:
+        if comments['replies'] == '':
+            print(nesting_of_comment*"--- " + f"{comments['replies'] = } (No Replies)")
+            nesting_of_comment -= 1
+        else:
+            for comments_dict in comments['replies']['data']['children']:
+                if comments_dict['kind'] != "more":
+                    nesting_of_comment += 1
+                    show_all_comments(comments_dict['data'], nesting_of_comment, num_of_file)
+                else:
+                    print(nesting_of_comment*"--- "+f"(There are also {comments_dict['data']['count']} more replies for {author})")
+                nesting_of_comment -= 1
 
-# result1 = make_requests1()
-# res = requests.get("https://oauth.reddit.com/r/python/new",headers=headers)
+
+
+# разбор странички с комментариями
+def make_comments_request(comments_url, num_of_file):
+    result_comments = requests.get(f'{comments_url}', headers=headers)
+
+    print(f'{result_comments.status_code =}')
+    print(f"{result_comments.headers['content-type']=}")
+    print(f"{len(result_comments.json())=}\n")
+
+# нулевой элемент списка содержит инфу о посте
+# первый - все комменты
+    comment_json=result_comments.json()[1]['data']['children']
+    print(f'{len(comment_json) = }')
+
+    print(':::::::::')
+ #   show_all_comments(comment_json[0]['data'], 0)
+    
+    for comment_for_top_post in comment_json:
+        print(':::::::::')
+        show_all_comments(comment_for_top_post['data'], 0, num_of_file)
+
+
+# loop through each post retrieved from GET request
+def show_what_is_in_subreddit(result_subreddit):
+    filename_top_post = "top_post_"
+    for (num_of_top_post,top_post) in enumerate(result_subreddit.json()["data"]["children"]):
+        top_post_info = {
+       'subreddit': top_post["data"]["subreddit"],
+       'author': top_post["data"]["author"],
+       'title': top_post["data"]["title"],
+   }
+        with open( filename_top_post+str(num_of_top_post+1)+'.txt', 'w', encoding='utf-8') as file_top_post:
+            file_top_post.write(f"{top_post_info['subreddit']=}\n")
+            file_top_post.write(f"{top_post_info['author']=}\n")
+            file_top_post.write(f"{top_post_info['title']=}\n")
+
+
+def construct_comments_url(result_subreddit):
+    comments_url_dict=[]
+    CONST_URL='https://www.reddit.com'
+    CONST_URL='https://oauth.reddit.com'
+    for post in result_subreddit.json()["data"]["children"]:
+        comments_url = CONST_URL + post['data']['permalink']
+        comments_url = comments_url[:-1]+'.json'
+        print(f"{comments_url = }")
+        comments_url_dict.append(comments_url)
+    return comments_url_dict
 
 
 # вытащить 3 самых популярных поста
-def make_requests2():
-    LIMIT = 3
+def make_requests2(LIMIT):
     CONST_URL='https://www.reddit.com'
   # https://www.reddit.com/top.json?limit=3
+
+  # формирую словарь result_subreddit.json()
     result_subreddit = requests.get(f'https://oauth.reddit.com/top.json?limit={LIMIT}', headers=headers)
 
     print("\n------------request for users/popular was done-----------")
     print(f'{result_subreddit.status_code =}')
-    print(f"{result_subreddit.headers['content-type']=}")
-    print(f"\n{result_subreddit.headers =}\n\n")
-    print(f"\n{len(result_subreddit.json())=}\n")
-    print(f"\n{result_subreddit.json().keys()=}\n")
+    print("-----Comments_URL---------")
+    comments_url_dict = construct_comments_url(result_subreddit)
+    print(f"{comments_url_dict = }")
 
-    time.sleep(4.0)
-    if "data" in result_subreddit.json().keys():
-        if "children" in result_subreddit.json()["data"]:
-            print("++++++") 
-            for data_massive in result_subreddit.json()['data']['children']:
-                if "data" in data_massive:
-                    if "title" in data_massive["data"]:
-                        print(f"{data_massive['data']['title'] = }")
-                        print(f"{data_massive['data']['permalink'] = }")
-                        print(f"{data_massive['data']['domain'] = }")
-                        data_massive_url = CONST_URL + data_massive['data']['permalink']
-                        data_massive_url = data_massive_url[:-1]+'.json'
-                        print(f"{data_massive_url = }") #ссылка на пост с комментнариями
-                        print("----------------------------")
+    print(f"\n----TOP {LIMIT} news-------------------")
+    show_what_is_in_subreddit(result_subreddit)
 
-    else:
-        print('NO data!=========')            
-
-    print(f'{result_subreddit.encoding=}')
-    print(f'{result_subreddit.is_redirect=}')
-    print(f'{result_subreddit.elapsed=}')
-    print(f'{result_subreddit.url=}')
-    print(f'{result_subreddit.history=}')
-    print(f'{type(result_subreddit)=}')
-
+    for (num_of_file, comment_url) in enumerate(comments_url_dict):
+        make_comments_request(comment_url, num_of_file)
     return result_subreddit
 
-result2 = make_requests2()
-
-
-# loop through each post retrieved from GET request
-# for post in result2.json()["data"]["children"]:
-#   # append relevant data to dataframe
-#   df = {
-#       'subreddit': post["data"]["subreddit"],
-#       'title': post["data"]["title"],
-#       'selftext': post["data"]["selftext"],
-#       'upvote_ratio': post["data"]["upvote_ratio"],
-#       'ups': post["data"]["ups"],
-#       'downs': post["data"]["downs"],
-#       'score': post["data"]["score"]
-#   }
-#   print(f"{df['subreddit']=}")
-#   print(f"{df['title']=}")
-#   print(f"{df['selftext']=}")
-#   print(f"{df['upvote_ratio']=}")
-#   print(f"{df['ups']=}")
-#   print(f"{df['downs']=}")
-#   print(f"{df['score']=}")
-#   print("------------")
-
-
 '''
-def get_reddit(subreddit,listing,limit,timeframe):
-    try:
-        base_url = f'https://www.reddit.com/r/{subreddit}/{listing}.json?limit={limit}&t={timeframe}'
-        request = requests.get(base_url, headers = {'User-agent': 'yourbot'})
-    except:
-        print('An Error Occured')
-    return request.json()
+ Работает
+    for post in comments_url_dict:
+          print(f"{post = }")
+          make_comments_request(post)
+          print("----------------------------") 
 '''
+
+if __name__ == "__main__":    
+    LIMIT = int(input("Введите количество топ-новостей: "))
+    result2 = make_requests2(LIMIT)
