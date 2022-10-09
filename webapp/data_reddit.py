@@ -13,11 +13,6 @@ from webapp.model import db
 from pprint import pprint
 from pprint import pformat
 
-CLIENT_ID='MD992QcOko5yJi6elfCC-g'
-SECRET_TOKEN='FdZouDukbnzfYdE59wa-xjQd1_oolQ'
-# here we pass our login method (password), username, and password
-user_name = 'winterlich_weiss'
-password = 'frozenwinter1990'
 
 '''
  load_dotenv(find_dotenv()) #for ./env
