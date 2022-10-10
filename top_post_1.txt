@@ -1,3 +1,0 @@
-top_post_info['subreddit']='todayilearned'
-top_post_info['author']='shaka_sulu'
-top_post_info['title']='TIL in the early 90s LL Cool J shared with his grandma that he couldn\'t survive as a rapper now that gangsta rap was popular. His grandma responded, "Oh baby, just knock them out!" which inspired him to write \'Mama Said Knock You Out\' a grammy award winning certified platnum single.'
