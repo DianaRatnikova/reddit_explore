@@ -1,0 +1,351 @@
+Slartibartfasts_dog: I once read that rendering the fur of Lotso in Toy Story 3 took more computing power than all of Toy Story 1
+--- Middle_Promise: I’m not surprised. Rendering realistic fluffy looking hair/fur is a bitch to do. You have to get it just right without it looking plasticity. Also cool fact, Lotso was supposed to be in the first movie but they didn’t have the ability to do so then.
+--- --- Slartibartfasts_dog: Cool! I didn't know the last part. I do know they animated Andy's mom from the waist down so they didn't have to animate her face.
+--- --- --- TheDoug850: Yeah! So there’s actually a shot where Woody is on the microphone and speaks to some toys on a shelf, one of which is a pink teddy bear. That’s character that was going to be Lotso.
+
+Additionally, they didn’t really know how to do the human (and dog) hair, so that’s why Andy and Sid both have buzzed hair, Molly has short, tight curls, Andy’s mom has a slicked ponytail, and Skud is a short-hair breed.
+
+Also, all of the kids at the birthday party are literally just Andy with different clothes.
+--- --- --- --- HoplessWanderer105: This is super interesting. Love me a good obscure Disney fact!
+--- ahp105: I believe it. Hair, smoke, and anything that “flows” is pretty computationally heavy. Motion has to follow complex mathematical models or it looks “off” to the human eye.
+--- --- absintheandartichoke: See: Final Fantasy:The Spirits Within. 
+
+Very weird hair.
+--- PM_ME_AYY_LMAOOS: If you look at Buster in the first Toy Story and then again in Toy Story 3 it essentially has no detailed fur in the first movie. 
+
+As the amount of details in these movies increase I wonder how detailed we'll get in ten years.
+--- --- pornplz22526: Buster isn't in the first Toy Story.
+--- --- --- ExcerptsAndCitations: Yeah, like the guy said, there is no detailed Buster hair in the first movie.
+--- bayarea_fanboy: similar for Merida's hair in Brave of Rapunzel's in Tangled, where the latter had over 100k strands of hair modeled
+Magnethius: I would like to know how long it would take today.
+--- TA_faq43: Probably be able to do it on a home computer.
+--- --- Noctew: Definitely. My current graphics card is several times more powerful that the world‘s largest supercomputer in 1999 when I wrote my masters thesis on scientific computing algorithms. And Toy Story was several years before that.
+--- --- --- Internet-of-cruft: The most powerful supercomputer of the time was 100 GFLOPS.
+
+A Nvidia RTX 4090 can push just over 1200 GFLOPS of pure fp64 performance.
+
+Now obviously there's a bit more than just raw computation, but that puts a modern video card at least 12 times as powerful as the most powerful *known* supercomputer of 1995.
+
+Pixar's render farm likely had less power than that. But let's assume it's the same. You could render the entirety of Toy Story in about 13 days with that RTX 4090.
+--- --- --- --- Illustrious_Act1207: You could redo Toy Story in Unreal Engine and it would look better and run in real time.
+--- --- --- --- --- Internet-of-cruft: Sure. Computing is built on the shoulders of giants. We've had almost 3 decades of advances. Software and algorithms has advanced so much that we could accomplish significantly more on comparable computing power.
+--- --- --- --- --- --- Couldnotbehelpd: Ok first of all no one needed you to come on here and point out that 1995 was almost 30 years ago.
+--- --- --- --- --- --- --- ListenItWillHear: Everyone knows 1980 was 20 yesrs ago so theres no way 1995 was 30 years ago. Thats just silly
+--- --- --- --- --- --- --- Elbradamontes: Six at the most.
+--- --- --- --- --- --- --- SoftlySpokenPromises: Gonna need some statistics to prove this slanderous drivel.
+--- --- --- --- --- Kriss3d: What we need is a solid AI that can remake games entirely in unreal Engine 5.
+
+Gta vice city and San Andreas ( with the latter actually having a trailer made in UE5)
+--- --- --- --- --- --- klonkish: [Nvidia's RTX Remix says "hi!"](https://youtu.be/Vg52-HZhrFc)
+--- --- --- --- --- Estrezas: If you redo Toy Story please include a dildo.
+--- --- --- --- --- --- Fuzelop: Buzz look an alien
+--- --- --- --- --- --- --- Hedgeson: Buzz Lightyear, meet Buzz the rear.
+--- --- --- --- --- --- --- --- ki11bunny: &gt;Buzz Lightyear, meet Buzz shite-rear.
+--- --- --- --- --- --- --- Nateh8sYou: Ahahahaha!
+--- --- --- --- --- --- get_over_it_already: Plot alternative ending twist: Buzz and Woody meet Andy's moms' toys... and they have the same name.
+--- --- --- --- --- --- -doobs: if toy story came out today bo peep would be the strong female lead and every problem would be caused by buzz's misogyny or woody's incompetence
+--- --- --- --- Jampine: Pixar put the farm in render farm by having ever server play an animal noise once it had finished processing.
+--- --- --- --- --- PaulAspie: If that's true, it would be funny.
+--- --- --- --- --- Internet-of-cruft: You dropped a letter. Here you go:
+
+
+*y*
+--- --- --- --- XauMankib: https://www.reddit.com/r/gadgets/comments/2jvyt0/in_1995_pixar_rendered_toy_story_on_a_294_x/?utm_source=share&amp;utm_medium=android_app&amp;utm_name=androidcss&amp;utm_term=1&amp;utm_content=share_button
+
+Based on this thread of 7 years ago, Toy Story was rendered on a cluster of 294 Sun SPARKStation 20 computers, each having a 100 MHz CPU and up to 512 MB of Ram. The whole graphical power of the cluster was 8 GFLOPS, or around the power of a PlayStation 2; this taking in consideration each SPARKStation has around 27 MFLOPS.
+
+Nowadays, a low tier smartphone has a graphical asset dozen of times more powerful.
+--- --- --- --- OpticGd: Days?!
+--- --- --- --- --- Internet-of-cruft: Edit: I screwed up the math on this. I updated below to correct it.
+
+Considering the film was 77 minutes long and took 1 day per 30 seconds, that puts the original render at 154 days.
+
+At 800,000 machine hours that puts it at around ~~5000~~ 216 machines on the render farm.
+
+Around then they were likely using Intel Pentium (note no suffixes) processors, likely the 66 MHz flavor.
+
+Intel didn't publish FLOPS spec, but it claimed about 78 MIPS (million instructions per second). Let's pretend it could run 1 fp64 operation in 4 instructions, so call it 20 MFLOPS to round up in a generous way.
+
+That gave their farm about ~~104,000~~ 4320 MFLOPS of compute or ~~104~~ 4.32 GFLOPS, which ~~lines up with my original guess~~ is 277 times slower than a modern GPU.
+
+~~So yeah, probably 12 days on a top end GPU today.~~
+
+~~More realistic estimate is 14 hours on that RTX 4090.~~
+
+With info provided by u/powerfulbuttblaster, the actual farm performance is around 50 GFLOPS which puts us at half the original estimate, or about 7 days.
+--- --- --- --- --- --- powerfulbuttblaster: Not Intel hardware. `The movie's final image rendering was accomplished on a "farm" of 87 dual-processor and 30 quad-processor 100-MHz SPARCstation 20`
+
+Source : http://sunsite.uakom.sk/sunworldonline/swol-11-1995/swol-11-pixar.html
+--- --- --- --- --- --- --- Internet-of-cruft: So according to that article, that places the performance at "over 300 Cray 1s", so let's go with that. That's about 50 GFLOPS, which is close to my original guess of 100 GFLOPs.
+
+So the total runtime on *one* modern RTX 4090 is about 7 days.
+--- --- --- --- --- --- --- --- SeesawMundane5422: It would be faster than 7 days. There was a lot lost to the overhead of shuffling data around a 10 base T Ethernet network. Slower disks. Slower networks. Command and control server shuffling the data out.  Less ram in each machine.  Efficiency gains in the software being more optimized today.  The raw GFLOPs is only a part of the equation.
+--- --- --- --- --- --- --- --- --- mornaq: &gt; software being more optimized today
+
+you know, about that...
+--- --- --- --- --- --- --- dwellerofcubes: I used to run a Sparc5 and a Sparc20 back in the late 90s.  Workhorses.  I don't even remember Solaris.
+--- --- --- --- --- --- --- --- PixelD303: Best pizza boxes money can buy
+--- --- --- --- --- --- --- --- VoiceOfLunacy: I used to run on an Onyx about that time. I can’t imagine what you could get today for what that thing cost.
+--- --- --- --- --- --- OpticGd: I just got confused by the number. I think I read other comments which hyped up modern computers more and expected minutes.
+
+But damn rendering a film (which I'm aware is a lot of work) by a home computer is 14 hours is wild!
+--- --- --- --- --- --- --- Internet-of-cruft: To call an RTX 4090 "just a home computer" isn't off base but the vast majority of home computers do not have that level of hardware.
+
+That card (when it's released in 2 days) is $1600.
+--- --- --- --- --- --- --- --- vivaldibug2021: That's mostly because most cards have their fp64 output gimped - compare the [RTX 4090](https://www.techpowerup.com/gpu-specs/geforce-rtx-4090.c3889) with the 
+[Radeon 280X](https://www.techpowerup.com/gpu-specs/radeon-r9-280x.c2398) from ages ago - they practically go head-to-head on fp64, but are miles apart on all other metrics. So that level of performance *was* available for way less over nine years ago.
+--- --- --- --- --- --- --- --- OpticGd: Yeah my knowledge of computers is fairly limited except for a hardcore watch streak of Linus Tech Tips in the spring.
+
+I know that I probably will never build my own computer like that majority of people.
+--- --- --- --- --- --- chainmailbill: Worth noting that pentiums of that era had a DX math co-processor, which handled floating point ops, so that speed would be a bit higher.
+--- --- --- --- --- --- omimon: Still 14 hours seem a lot for 2022 technology. I would have thought it would at most take a lunch break worth of time.
+--- --- --- --- --- --- --- j-random: My wife did FEA modeling around that time. I remember sitting around while she "cleaned up her meshes" on Friday afternoon so she could run her analyses over the weekend. Fast forward to today, and she's complaining that the more-complicated models she has today won't run over her lunch break. So it really do be like that sometimes.
+--- --- --- --- --- --- --- Internet-of-cruft: It's all about the numbers. Based on info from what u/powerfulbuttblaster linked to, it's closer to 7 days on modern hardware.
+--- --- --- --- Kingtoke1: Could probably do it in real time with a barely noticeable drop in quality
+--- --- --- --- --- Valance23322: You could probably render the whole movie in 30 seconds at higher quality.  There's probably more polygons and more complex lighting being rendered in a single frame of a modern video game than there was in minutes of footage from Toy Story
+--- --- --- --- --- --- Kingtoke1: Polys are easy to render.
+Its the ray traced lighting that was the killer
+--- --- --- --- MikeFT65: Shouldn't computers be larger to be more powerful? https://youtu.be/ykxMqtuM6Ko
+--- --- --- Hero_The_Zero: I would agree. GamersNexus, who is a very in-depth computer hardware reviewer, said their logo animation took several days to render on a HEDT computer with 7 1080Tis in it, and a single RTX 2080Ti or RTX Titan ( honestly don't remember) was able to do it in a few minutes. 
+
+I would imagine the dedicated ray tracing hardware would be just as helpful to a studio rendering an animated movie.
+--- --- --- --- ChronWeasely: This must be for purely ray-tracing purposes, because the 2080ti is only about 30% faster than the 1080ti as far as "typical rendering"
+--- --- --- --- --- Hero_The_Zero: I would say so, the animation is probably completely ray traced. Like you said, 7 1080Tis would still have several times the raw rasterization performance of a single RTX 2080Ti.
+--- --- --- --- --- --- ChronWeasely: Rasterization. That's the word I was looking for.
+--- --- --- curly_redhead: Hey I did a masters in scientific computing too!
+--- --- --- --- Ezl: Well I don’t have a masters in scientific computing but I *did* sleep at a holiday in express last night, sooo…
+
+*smugly rocks from heel to toe while flexing suspenders*
+--- --- --- --- --- ExcerptsAndCitations: "You know, I'm something of a computer scientist myself."
+--- --- --- --- --- --- Ezl: Bravo!
+--- --- --- phat-meat-baby: You are smart
+--- --- --- disposablethought: VFX shops use CPU to render frames. GPU is only  good for artist workstations.
+
+Cool video about farms by a friend: https://youtu.be/hUMOmxK_hf0
+
+Source: I work in a render farm
+--- --- SuperAlloyBerserker: Speaking of home computets and the development of a Toy Story movie, I think all of Toy Story 2 was accidentally deleted during production
+
+But one of the Pixar staff fortunately had a copy of the movie in her computer at home, so production was able to continue using that copy
+--- --- --- DigNitty: IIRC she was working from home on maternity
+--- --- --- --- RandoCalrissian11: 100%. They ended up only losing a tiny portion of the movie.
+--- --- --- --- ShadowLiberal: She was previously working from home on maternity, but not at the time it happened, but she still had the offsite backup.
+
+I wouldn't be surprised if they still lost some resources due to the backup being a bit out of date, but it was a heck of a lot better than where they would have been without it, where 90%+ of their files were deleted.
+--- --- --- --- --- IllDiscipline7466: If you are talking about the same quality CGI, it must be rendered in real time.
+--- --- --- wolfpack_charlie: They did the classic `$ sudo rm -rf /` command on their Linux server. 
+
+Trying to recursively delete every file in a specific folder, but they accidentally tell it to start at the root folder
+--- --- --- --- Rusty_Shakalford: Are you joking is is that seriously what happened?
+--- --- --- --- --- wolfpack_charlie: Yup 
+
+https://thenextweb.com/news/how-pixars-toy-story-2-was-deleted-twice-once-by-technology-and-again-for-its-own-good
+--- --- --- --- Halvus_I: Someone ignored the sudo message....
+
+&gt;We trust you have received the usual lecture from the local System Administrator. It usually boils down to these three things:
+
+#1) Respect the privacy of others.
+
+#2) Think before you type.
+
+#3) With great power comes great responsibility.
+--- --- --- dreamCrush: It's my understanding that version of the movie was like 90% canned and started over later anyway
+--- --- wolfpack_charlie: Easily rendered in real time. 
+
+If course, writing a modern renderer that does the exact same thing as the renderer used for toy story 1 would be a lot of very specific work and a really weird task, but if we're not concerned with it looking 100% exactly the same, your phone would have no problem rendering this in real time like a video game
+--- --- --- dwellerofcubes: Phones don't raytrace
+--- --- --- --- watchingwatchawatch: Neither did Pixar in 1995. The version of Renderman at the time was a pure scanline renderer.
+--- --- wartornhero: Little bit more specialised, Here is an example. A watercooled, server system with a bunch of GPUs (A600 GPUs).
+
+"Use this for rendering mostly, .... this will do like 400 frames per minute.."
+
+[https://youtu.be/oVhFThazzog?t=779](https://youtu.be/oVhFThazzog?t=779)  
+
+
+1:30-3:30 per frame on a top end consumer GPU + CPU. vs on this server... 7-15 seconds per frame depending on which frames they are rendering.
+--- --- SaborW: In real time if you're also using modern software that have the benefit of all these efficiencies and optimizations
+--- --- FightOnForUsc: You absolutely could, it would still take a long time
+--- --- Jlindahl93: This. A current MacBook Pro would crush it. Couple hours maybe
+--- --- jmarshallca: Wasn't one of the sequels partially rendered from a backup copy kept by one of the animators on a home computer, after the master copy was lost or corrupted? It probably wasn't rendered on that computer, unless it would have taken too long to send it to the render farm.
+--- --- AudioGeekOfficial: Makes sense. Since this is almost 30 years old, these people, PIXAR, were able to show the world they could give effort. When you stand out like these guys did, you can expect to see what you did belong to the public domain in 30 years. That sounds depressing, but that's exactly how it is. 🤣💀🪦
+--- neilscottsills:  "Some 3D effects were too complex, or even impossible, to calculate at the time of this film; subtle tricks are used to avoid them. Examples: explosions, thus the viewer doesn't see Combat Carl's demise; hair dynamics, so Andy, Sid, and Molly all have short hair while Andy's mother's hair is always tied back in a simple-to-model pony tail; and flying water droplets, thus the viewer doesn't see any liquid when Woody dunks his burning head into a bowl of cereal." (imdb) Hair dynamics back then would have been a nightmare.
+--- --- PM_ME_YOUR_ANYTHNG: And then once they got it we saw Violet's hair in the incredibles and monsters inc which were both fantastic
+--- --- --- abzinth91: Iirc Disney waited to make Tangled because the tech for the hair animations wasn't ready before the 2010s
+--- angrymonkey: In 2008, around the time that it was re-rendered for stereo 3D release, it could have been rendered approximately in real time on Pixar's 4000-core render farm.
+
+Pixar now has &gt; 50,000 cores and Moore's law has been cooking for a decade and a half, so that would be quite a bit faster now.
+
+In terms of complexity, I'm confident it's something that could be rendered in real time on a consumer graphics card, but unfortunately that's not possible because there isn't any game engine that can render the data that way in the format that it's represented.
+--- ioncloud9: It could be rendered in real time for sure if you are talking the same quality cgi.
+--- --- IanMazgelis: You could definitely get something that looks better in real time, but I'm not sure if you could do the exact same workload in real time. The polygon count and the amount of light was probably ridiculous. It absolutely looks worse than a lot of video games that are out today, but I wouldn't be surprised if it took more processing power to do.
+
+For instance, [this](https://i.imgur.com/baTtzJX.jpg) fan made render in the style of Mario 64 couldn't be done in real time, but [this](https://i.imgur.com/lwQClU0.jpg) mod of the game can. There's lots of weird little differences with real time and pre rendered production, and they usually don't progress in parallel.
+--- --- --- j-random: Pixar was obsessed with ray tracing and reflections in the early days. I remember one of their early Renderman promo shots was of a bike shop, and the reflections in the fenders of the bikes was weird. Like the bikes were made from mirrors with a layer of cellophane for paint.
+--- --- Jazehiah: The difficulty is the lighting. Ray tracing still takes a lot of computing power. We can aproximate it in real time, but it's not perfect. 
+
+Another thing to factor in is multi-threading. CPUs have gotten faster, but the biggest difference in power is that the number of instructions that can be executed at the same time. Modern software is designed to take advantage of this.
+
+I would love to see how long a modern computer (and software) would take to render Toy Story, given the same parameters.
+--- --- --- ioncloud9: There are definitely better ways and shortcuts to accomplish the same thing that can be done in real time now.
+--- way2funni: If we are only comparing image quality and final render output seen on screen, we're doing it in real time now.
+
+Disclaimer: I don't work in the field but I'm an old videogame/card geek from way back when VooDoo graphics were the thing.
+
+Now, if we're being fair, the render software (Renderman) and files **associated with Toy Story specifically** do not really convert/translate on **modern home video gear** so I am not trying to make a comparison there.
+
+All I am saying is modern home computers and (latest gen top level) video cards can render **toy story level graphics output (or better) in real time.**
+
+Toy Story 1 originally [was rendered at a resolution of 1536 × 922](https://en.wikipedia.org/wiki/Toy_Story) pixels and a frame rate of 24 fps. Not even full HD and it would be borderline unplayable in game. You need a minimum of 30fps and these days most games shoot for a min of 60 fps to play smooth with no visible slowdowns.
+
+Latest gen videocards are pushing 8k ( 7680 × 4320) at 60fps **but they use a lot of tricks to do it**. There is a LOT of optimization at the driver/game engine level.
+
+The mechanics are not comparable to the rendering setup Disney was using.
+
+Disney was going for realism- Woody required 723 motion controls, including 212 for his face and 58 for his mouth. Nobody is programming for that even on something as sophisticated [as Unreal engine 5](https://www.unrealengine.com/en-US/unreal-engine-5?utm_source=GoogleSearch&amp;utm_medium=Performance&amp;utm_campaign=3Q_UnrealEngine_Search_Brand_US&amp;utm_id=17086214833&amp;sub_campaign=&amp;utm_content=existing&amp;utm_term=unrealengine)
+
+**Example,** depth of field effects. Most games with lots of pixels and triangles only give you **the sharpest and most detailed image at the center of where the action is.**
+
+To keep triangle/poly counts low , most of the rest of the screen is either static (background, buildings, scenery etc) or it has been blurred/ less detailed as you look off into the distance to a degree you don't notice when playing at 60 fps and engaging the final boss.
+
+Also, the final render output does not render everything that's there, only what you can actually see because it's closest to you or 'on top' of everything that exists. If it's not visible from your POV, the game doesn't perform any calculations or render any pixels in that area that are 'behind' what you actually can see.
+--- --- Halvus_I: &gt; Disney was going for realism- Woody required 723 motion controls, including 212 for his face and 58 for his mouth. Nobody is programming for that even on something as sophisticated as Unreal engine 5
+
+I wouldnt be so sure about that.
+
+https://www.unrealengine.com/en-US/metahuman
+--- Wendals87: it could be done in real time with a modern gpu, according to someone on reddit [here](https://np.reddit.com/r/AskTechnology/comments/9o0sts/could_the_2080ti_render_toy_story_1_in_real_time/)
+--- Khelthuzaad: Basically the time it took Toy Story 4
+--- Cohibaluxe: Same quality? On a regular desktop computer, probably a few seconds for the whole movie. Less than a minute for sure. We’ve got real-time ray tracing on consumer graphics cards today - this movie looks worse than modern games which run real-time at 2-3x the FPS (meaning for 24FPS footage, you could do 3 seconds worth of frames per second real-time).
+--- --- Arronax50:  In fact "ray tracing" in consumer graphics cards is a far cry from "ray tracing" in professional 3D non real-time renderers.
+--- --- --- Cohibaluxe: It’s still dedicated accelerated hardware, and it does *dramatically* speed up non-real time ray tracing in programs like Blender and V-ray.
+--- --- --- Zarmazarma: That's true, but you could probably make a version that would be visually indistinguishable to anyone just watching the film in real time, or faster.
+--- --- --- --- Halvus_I: Sure, but you lose chances at 'emergent behavior' when you have to rely on tricks to make it work. We want real time ray tracing to be effortless, so its something you dont even have to 'think' about anymore. Lighting should be the realm of artists, not tricky technicians.
+--- MacRubys: About an hour.
+--- DreamsOfMafia: Not very long
+--- PossiblyLinux127: I would say a few seconds but that is just a guess
+--- JimBeam823: Faster than real time.
+--- sneaky4oe: About 20 minutes most on any modern gaming rig. Slowest would be compression to video file, not 3d.
+Polycount is low, environment is simple, no complex lights. Maybe even 10 minutes... Depends on output file resolution mostly.
+--- No_Opinion_4662: I remember seeing one of their conference, and they said that it took a day to render one frame on the first, and now with modern technology, to get Toy Story 3 it took… a day for a frame.
+--- dyskinet1c: They can do it faster than real time. As in less than the run time of the movie.
+--- jacky4566: It might be a more complicated answer. Many of the tools we use today benefit from optimizations not just raw horsepower.
+If you used the exact same tool chain I suspect it might not be as fast as people think.
+It would be interesting to see toystory rendered again.
+--- AlterEdward: Toy Story could pretty much be done in real-time on a PS4. 
+
+https://youtu.be/tkDadVrBr1Y here's a Digital Foundry comparisons to Kingdom Hearts 3. What's interesting is that the look is really close, but the actual animation of the characters in the movie is way better than in Kingdom Hearts, despite the fact that they didn't have the sophisticated animation tools that character rigs have today. Makes you appreciate the artistry in the character movement.
+--- Kriss3d: Today you could do it on a gaming rig in a few month i think.
+--- gerund_acquirer: Pixar’s current supercomputer could do the whole movie in 30 minutes
+--- KenjiFox: I could probably render it more accurately in real time twice on my PC now. Kinda funny. Kinda sad.
+--- could_use_a_snack: The video I just watched on the subject suggested that the machines used to render Toy Story 4 cold render Toy Story 1 in an hour or so.
+Beavshak: So the time to render what became the final movie took almost a year?
+--- believeblycool: Assuming they’re able to went render over the weekend, I think it’s actually closer to six months. 77 min = 4600 seconds, at 25 seconds per day (since they said less than 30 seconds per day), that’s 184 days or 6.16 months.
+TheMadShatterP00P: I was in animation school in 2006 - to render our :30 second projects, we'd take turns dividing the render across the 12 machines in the lab and sleep under the desks to monitor them for errors. 
+
+The same renders back then take only minutes today.
+--- wolfpack_charlie: But also today if you wanna render a complex scene at high resolution, high samples, it still takes a fuck ton of time to run locally
+--- --- Just_Discussion6287: If you do it with unreal engine 5 it's real time and unlimited geometry. Same for nVidia omniverse.
+--- --- --- Funue: Not a graphic designer but usually there is a catch, my guess it's tedious to do in real engine compared to  other software like blender, maybe it render fast but take more time to make
+--- --- --- wolfpack_charlie: Yes, that's realtime rendering, which is rasterized (that includes real-time RT, which is added on top of the rasterized image). Offline, path traced rendering is still very expensive in terms of performance and very far from real-time
+--- I_love_pillows: Architecture too. In the mid 2000s may take 6 hours to do a single high res image render. 
+
+Now with cloud based render it can be done in a few seconds.
+--- IskandrAGogo: I remember working in a geospatial lab in the early 2000s, running queries on ARC GIS (May have still been ARC VIEW then). The sleeping under the desk was so true. We wouldn't even go to lunch as a group for fear some idiot would come in and reset our computers so that they could use them. Our queries often took 12+hours. These were being done on machines that had 400 to 500MHz CPUs. Our queries we're usually a page or two of Avenue script, and the databases were never more than 50MB. But, everything took forever.
+
+Sometime in 2004/2005, I bought myself a high-end laptop with a brand new 2GHz CPU. It did the same queries in less than 30 minutes. Instead of being on campus for an entire day, I usually did my work at home on a weekend. I'd get up early in the morning, download the files I'd need for my assignment (which at the time, it was insane that I had enough bandwidth to do), write the query, and then go eat breakfast.
+
+Today, it'd probably take me way longer to write a query like I was back then than it would to actual run and get the results.
+Stratiform: I would love to see how these stats compare to a modern CG movie. Anyone have stats for that?
+--- Wendals87: I think it's just as long, if not longer. Computing power is significantly better today but the amount of detail in cg animated movies is incredible.
+
+Here's some facts on toy story 4. The most expensive frame took 325 hours on a 4 core device 
+
+https://www.creativebloq.com/news/mind-boggling.toy-story-4-facts
+--- The_Truthkeeper: I've heard a general rule of thumb that at the lowest end, a frame of CG animation will take a minimum of an hour to render.  At the top end I've heard that Avatar took 50 hours per frame.
+--- --- gajaczek: Movie is 160 minutes, at cinematic 24 fps it would equal to 230400 frames, at 50h per frame it would be roughly 1300 years.
+--- --- --- DZCreeper: That is compute time. The work is spread across a render farm which is 100+ PC's. In the case of a major studio like Disney, even 500+.
+
+Also, it won't be 50 hours per frame. That would only be the most complex frames with many light sources and complex meshes.
+
+Even a project like Avatar would be 1-2 real world years of render time, much less if the same render was repeated on modern hardware.
+--- --- --- --- workedog: Hopefully they aren't using Personal Computers for such a rendering workload!
+--- --- --- --- --- Jason1143: Yeah this is what server racks full of render blades are for, you ain't just grabbing consumer grade GPSs off Newegg and throwing them in a standard case.
+--- --- --- imashination: That's about right. Now divide the 1300 years by 2000 render nodes, would be 8 months of processing.
+--- wolfpack_charlie: Same amount of computing time, more or less, just way better capabilities
+--- angrymonkey: At a high-end studio, one frame (1/24th of a second) might take ~24h of cpu time at final quality.
+
+Expensive/difficult shots might take hundreds of hours per frame.
+--- gerund_acquirer: The scene from Toy Story 4 where there are a bunch of chandeliers onscreen took over 325 hours for a single frame
+dicky_seamus_614: For all its troubles &amp; inconveniences, I still look back on those early days of computing with fondness.
+--- Wendals87: computers felt magical back then. I don't know if it's because I grew up with them or they are so commonplace now, but to me they have lost some of that
+--- --- PatrenzoK: I agree. Same with the internet. It was cool and exotic in the beginning. Now we’re trapped here.
+--- --- Halvus_I: I jsut built a 5800x3D with 32 GB of ram and a 6900XT card connected to an OLED TV. I assure you its magical too.
+--- BuckeyeSmithie: &gt; those early days of computing
+
+I was about to say: Dude, what do you mean "early days"; that was 1995, not the 1970s! But now that I think about it, 1995 was closer (in time) to Apollo 11 than to present day.
+
+Also... wow I'm old.
+--- --- dicky_seamus_614: Hahaha! You’re right!
+
+I do tend to operate on *self-central-time* so; late 90s even early 2K was the early days of computer (for me). If I knew then what I think I know now..
+thegreatgazoo: I was into ray tracing around 1993. I had a 486sx and a 320x200 image could take 24 hours to run depending on the surface and reflection settings.
+
+It ran on Dos so that's all it could do. If the power flickered, everything was toast.
+--- Eodun: PolyRay and POVRay gang unite!
+TwoUglyFeet: Another TIL is that Toy Story 2 was almost deleted when the wrong command typed into the computer started deleting files. Luckily the technical director Galyn Susman had a backup at home because she was recovering from delivery.
+--- Reset_Tears: The sad TIL that follows that TIL is how that version of Toy Story 2 later ended up getting scrapped anyways, because apparently it was a bad movie and they decided to rewrite the whole thing and basically start all over (save for characters and locations that remained in the new script). Pretty depressing, but they ended up somehow making a good movie in the little time they had left before the release date (which they didn't delay).
+--- --- imBobertRobert: Look at it this way: if they lost the original and had to start mostly from scratch, they mightve a lot more time with the original story and could've had a much harder time scrapping it and re-writing it! Between the sunk-cost, scheduling, and budget, they could've been in a rough spot and could have had to settle for a worse movie.
+--- --- UsernameChallenged: Probably an unpopular opinion, but toy story 2 is the best of the 4.
+--- --- --- jwktiger: I haven't seen 4 (and only seen 3 in pieces) but I'd agree with this
+--- opking: That story greatly shaped the way I handle backups on my projects.
+--- Kayge: 
+Yup, the command was. 
+
+&gt;/bin/rm -r -f *. 
+
+Also made an appearance as an Easter egg in Toy Story 4 on a license plate.
+--- Slythagoras: That must have been a big amazon parcel to require a recovery period
+unusedusername3: It was also light years ahead of any other animation of it's time. When the Luxo Jr. short:  https://www.youtube.com/watch?v=zmhZm5FRV4s was shown in a industry conference it floored people. These people were experts, some working for the competition.
+--- nascarfan624: I appreciated the pun
+--- --- unusedusername3: Thank you for noticing.
+GrandmaPoses: “We can render about 30 seconds a day.”
+
+“What if we get *a second* computer?”
+
+“Holy shit.”
+--- Wendals87: not sure sure of this a joke, but they used many many computers to reach the 30 seconds a day rendering time
+charely6: also making humans look correct was pretty hard so all of the children are identical to Andy with various hats and outfits. So all of their faces are identical.
+Ninnux: I considered my Pentium 90mhz blazingly fast back in 1995.
+
+So, I can understand an entire shop of these things taking that long.
+JeffMorse2016: Will someone please explain using small words why rendering is so computer intensive?
+--- username____here: Lots of math
+--- --- JeffMorse2016: Of course. I'll see if I can find a vid on YT about it. I'm curious about the process.
+--- --- --- MEaster: You'll probably want to look up [ray tracing](https://en.wikipedia.org/wiki/Ray_tracing_\(graphics\)). Conceptually it's pretty simple, it's just that doing it at high quality is... *lots* of maths.
+--- Incognit0ne: Color go in spot math tell color where to go lots of math
+--- --- Jason1143: Also math override other math
+--- Halvus_I: OK so you have a scene of a room with light streaming in from a window. It takes a lot of compute power to follow the light rays as they bounce around the room. Add a mirror, LOTS more bounces.
+Yard_Sailor: Cue up R.E.M.’s “Stand”
+--- Jason_Worthing: 🎵Stand in the place where y🎵
+Chromattix: I would love to see them re-render the first two films to bring them up to the standard of 3 and 4 (this means a lot of lighting, and texturing changes too) and then release them all as a special edition pack or something, or even cinema release the lot with each movie shown six months apart from each other.
+DurinsBane1: Nice
+thealphateam: They also did not have enough storage space to hold all the rendered images. They had to put some to film, then delete them to hold newer images.
+ExjwReborn: Crazy for me to think I was only 11 when this movie came out.
+Incognit0ne: Hey My neighbor made the stop motion version
+D_Lockwood: I saw it in the theaters. It was mind-blowing.
+--- frankyseven: Me too! It was the first movie I ever went to in theatres. I vividly remember the chase scene when Woody lights the rocket on Buzz then they are flying, everyone in the theatre was laughing at Woody's face going crazy. My parents had warned us that we needed to be quiet and no talking or laughing out loud because it might disturb other people. It was a perfect first movie to watch in a theatre.
+The_Chocolate_Teapot: Damn I’m old.
+--- igby1: Damn. Toy Story came out 27 years ago. Nearly three decades ago!
+--- --- OldMork: and 12 years earlier came War Games, the ending scenes graphics was just lines and circles but not even that was possible at the time, all was done with trickery.
+--- --- --- DroolingIguana: The Atari Star Wars arcade game was rendering reasonably complex 3D shapes in real-time the same year War Games came out. They probably could've managed something similar to the ending with actual computer graphics, it was just easier to fake it.
+MeanGreanHare: They could probably render it in real-time today with a single RTX 4090.
+DrawyahGames: Imagine spending 154 days rendering the entire movie, only to find a graphical error within the first 5 minutes.
+--- DangoQueenFerris: Then you just re-render that particular scene. No need to redo everything
+HPmoni: That's pretty quick.
+
+Shooting a live action scene can take several days.
+
+Heavens Gate. The director filmed a whip cracking 77 times.
+VanessaClarkLove: I went to 3d animation school in 2007 and my final demo reel took 14 hours to render and I slept overnight at school, under the computer as it plugged away.
+AutumnLeaves1939: LAIKA studios only gets about 3-5 seconds of stop motion animation done in a week.
+gorpgorpgorpgorp: What's a machine hour? Does it work differently from human hours?
