@@ -1,3 +1,0 @@
-top_post_info['subreddit']='todayilearned'
-top_post_info['author']='Candid-Mixture4605'
-top_post_info['title']='TIL The band Redbone, who played the 70’s hit “Come and Get Your Love” (repopularized by “Guardians of the Galaxy”), was the first successful rock group formed by Native Americans.'

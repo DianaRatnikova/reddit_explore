@@ -1,3 +1,0 @@
-top_post_info['subreddit']='todayilearned'
-top_post_info['author']='GruvisMalt'
-top_post_info['title']='TIL The first Toy Story film (1995) required 800,000 machine hours and 114,240 frames of animation in total, divided between 1,561 shots that totaled over 77 minutes. Pixar was able to render less than 30 seconds of the film per day.'
