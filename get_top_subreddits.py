@@ -1,7 +1,6 @@
 from webapp import create_app
-from webapp.data_reddit import make_requests2
+from webapp.data_reddit import main_request
 
 app = create_app()
 with app.app_context():
-    LIMIT = int(input("Введите количество топ-новостей: "))
-    make_requests2(LIMIT)
+    main_request()
