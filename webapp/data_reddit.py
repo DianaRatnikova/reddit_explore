@@ -6,7 +6,7 @@ from dotenv import load_dotenv, find_dotenv #для .env
 from webapp.model import db, Top_Subreddit
 # import json
 import webapp.config
-
+import os
 
 # Используемые ресурсы:
 # https://github.com/reddit-archive/reddit/wiki/OAuth2
@@ -52,7 +52,7 @@ def authentication():
     print(f"{headers = }")
 
     return headers
-    
+
 
 def print_result_post(result_post):
     print(f"{result_post = }")
@@ -65,10 +65,18 @@ def print_result_post(result_post):
     print(f'{result_post.is_redirect=}')
 
 
+def mkdir_for_results(FOLDER_NAME):
+    if not os.path.isdir(FOLDER_NAME):
+        os.mkdir(FOLDER_NAME)
+    os.chdir(FOLDER_NAME)
+
 def write_comments_to_file(filename: str, comments: list, nesting: int):
+    mkdir_for_results(webapp.config.FOLDER_NAME)
+
     with open(filename, 'a', encoding='utf-8') as file_comment_top_post:
         file_comment_top_post.write(nesting*"--- " + f"{comments['author']}: {comments['body']}\n")
     file_comment_top_post.close()
+    os.chdir("..")
 
 
 def show_all_comments(comments, nesting_of_comment, num_of_file):
@@ -104,11 +112,13 @@ def make_comments_request(comments_url, num_of_file, headers):
 
 
 def write_subreddit_to_file(filename: str, top_post_info: list):
+    mkdir_for_results(webapp.config.FOLDER_NAME)
+
     with open(filename, 'w', encoding='utf-8') as file_top_post:
         file_top_post.write(f"{top_post_info['subreddit']=}\n")
         file_top_post.write(f"{top_post_info['author']=}\n")
         file_top_post.write(f"{top_post_info['title']=}\n")
-
+    os.chdir("..")
 
 # loop through each post retrieved from GET request
 def show_subreddit_data(result_subreddit, comments_url_list):
